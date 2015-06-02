@@ -61,7 +61,7 @@ public abstract class AbstractEntity<ID extends Serializable> implements Persist
 
         AbstractEntity<?> that = (AbstractEntity<?>) obj;
 
-        return null == this.getId() ? false : this.getId().equals(that.getId());
+        return null != this.getId() && this.getId().equals(that.getId());
     }
 
     /*
